@@ -107,6 +107,11 @@ li {
   background: #900;
 }
 
+.main-cover img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .content h2 {
   font-size: 4rem;
   display: grid;
@@ -151,4 +156,48 @@ li {
 
 .footer p {
   text-align: center;
+}
+
+@media (max-width: 75rem) {
+  .vantage-content {
+    grid-template-columns: 1fr;
+  }
+
+  .content h2 {
+    text-align: center;
+  }
+
+  .main-info h1::after {
+    display: none;
+  }
+}
+
+@media (max-width: 60rem) {
+  body {
+    margin-top: 2.5rem;
+    gap: 2.5rem;
+  }
+
+  .main-header {
+    gap: 2.5rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .main-info {
+    text-align: left;
+    justify-items: start;
+  }
+
+  .content h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 25rem) {
+  .content h2 {
+    font-size: 2.5rem;
+  }
 }
